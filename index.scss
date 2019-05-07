@@ -206,12 +206,12 @@ body {
   .el-button {
     width: 320px;
     height: 36px;
-    background: rgba(245, 245, 245, 1);
-    border-radius: 3px;
-    border: none;
-    box-shadow: 0 8px 15px rgba(255, 116, 185, 0.25);
-    transition: all 0.5s;
     color: #fafafa;
+    border: none;
+    border-radius: 3px;
+    background: rgba(245, 245, 245, 1);
+    box-shadow: 0 8px 15px rgba(255, 116, 185, 0.25);
+    transition: all .5s;
     &:hover {
       box-shadow: 0 8px 15px rgba(255, 116, 185, 0.25),
         0 8px 15px rgba(255, 116, 185, 0.25);
