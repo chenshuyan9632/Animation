@@ -1,0 +1,10 @@
+{
+  "name": "animation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "chenshuyan",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.20.1"
+  }
+}

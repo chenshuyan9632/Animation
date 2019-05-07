@@ -1,0 +1,237 @@
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+@keyframes paneA-bg {
+  0% {
+    transform: translate(15%, -5%);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes paneB-bg {
+  0% {
+    transform: translate(-15%, -5%);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+@keyframes paneA {
+  0% {
+    transform: translate(30%, -15%);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+
+@keyframes paneB {
+  0% {
+    transform: translate(-30%, -15%);
+    opacity: 0;
+  }
+  25% {
+    transform: translate(0%, 0%);
+    opacity: 1;
+  }
+}
+@keyframes data {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes coinA {
+  0% {
+    opacity: 0;
+    transform: translate(0%, 100%) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+@keyframes coinB {
+  0% {
+    opacity: 0;
+    transform: translate(0%, 200%) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0%, -5px);
+  }
+  100% {
+    transform: translate(0%, 5px);
+  }
+}
+.animate-box {
+  width: 800px;
+  height: 936px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-image: url('./images/main.png');
+  top: 10%;
+  left: 5%;
+  position: absolute;
+  .box-img {
+    position: absolute;
+  }
+  .box-paneA-bg {
+    top: 25%;
+    left: 73%;
+    animation: paneA-bg 4s linear infinite;
+  }
+  .box-paneB-bg {
+    top: 25%;
+    left: 8%;
+    animation: paneB-bg 4s linear infinite;
+  }
+  .box-paneA {
+    top: 28%;
+    left: 71%;
+    animation: paneA 4s linear infinite;
+  }
+  .box-paneB {
+    top: 28%;
+    left: 13%;
+    animation: paneB 4s linear infinite;
+  }
+  .box-coinA {
+    top: 36%;
+    left: 38%;
+    animation-name: coinA, move;
+    animation-duration: 1s, 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s, 1s;
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+  }
+  .box-coinB {
+    top: 27%;
+    left: 54%;
+    animation-name: coinB, move;
+    animation-duration: 1s, 1.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s, 1s;
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+  }
+  .box-data {
+    left: 28%;
+    top: 15%;
+    animation: data 4s linear;
+  }
+}
+
+.login-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: -webkit-linear-gradient(
+    75deg,
+    rgb(56, 0, 138) 0%,
+    rgb(53, 13, 97) 30%,
+    rgb(66, 12, 103) 63%,
+    rgb(168, 83, 127) 93%
+  );
+  .box {
+    width: 500px;
+    height: 350px;
+    z-index: 9999;
+    position: absolute;
+    top: 30%;
+    right: 14%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 12px 2px 13px rgba(255, 116, 185, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .box-input {
+    border-radius: 3px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .el-input {
+    background-color: rgba(0, 0, 0, 0.05);
+    border: none;
+    width: 250px;
+    height: 36px;
+    padding: 0 35px;
+  }
+  .icon-span {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    left: 5px;
+    top: 0;
+    text-align: center;
+  }
+  .icon {
+    width: 25px;
+    height: 36px;
+    display: inline-block;
+  }
+  .icon-user {
+    background: url('./images/usr.png') no-repeat center;
+  }
+  .icon-password {
+    background: url('./images/password.png') no-repeat center;
+  }
+  .el-button {
+    width: 320px;
+    height: 36px;
+    background: rgba(245, 245, 245, 1);
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 8px 15px rgba(255, 116, 185, 0.25);
+    transition: all 0.5s;
+    color: #fafafa;
+    &:hover {
+      box-shadow: 0 8px 15px rgba(255, 116, 185, 0.25),
+        0 8px 15px rgba(255, 116, 185, 0.25);
+      background-image: -webkit-linear-gradient(
+        180deg,
+        rgb(199, 43, 255) 0%,
+        rgb(254, 95, 201) 100%
+      );
+    }
+  }
+  .login-button,
+  .login-oa-button {
+    background-image: -webkit-linear-gradient(
+      180deg,
+      rgb(170, 104, 236) 0%,
+      rgb(252, 105, 200) 100%
+    );
+  }
+  .wrapper-login,
+  .wrapper-oa {
+    margin: 10px 0;
+  }
+}
